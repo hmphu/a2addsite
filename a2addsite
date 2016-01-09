@@ -51,24 +51,24 @@ _EOF_
 
 function build_vhost {
 cat <<- _EOF_
-	<VirtualHost *:80>
-	        ServerAdmin $ADMIN_EMAIL
-	        ServerName $DOMAIN
-	        ServerAlias www.$DOMAIN
+    <VirtualHost *:80>
+        ServerAdmin $ADMIN_EMAIL
+        ServerName $DOMAIN
+        ServerAlias www.$DOMAIN
 
-	        DocumentRoot $WWW_ROOT/$DOMAIN
+        DocumentRoot $WWW_ROOT/$DOMAIN
 	        
-		<Directory $WWW_ROOT/$DOMAIN>
-	                Options -Indexes +FollowSymLinks +MultiViews
-	                AllowOverride All
-	                Order allow,deny
-	                Allow from all
-	        </Directory>
+        <Directory $WWW_ROOT/$DOMAIN>
+            Options -Indexes +FollowSymLinks +MultiViews
+            AllowOverride All
+            Order allow,deny
+            Allow from all
+        </Directory>
 		
-		LogLevel warn
-	        ErrorLog $LOG_ROOT/$DOMAIN/error.log
-	        CustomLog $LOG_ROOT/$DOMAIN/access.log combined
-	</VirtualHost>
+        LogLevel warn
+        ErrorLog $LOG_ROOT/$DOMAIN/error.log
+        CustomLog $LOG_ROOT/$DOMAIN/access.log combined
+    </VirtualHost>
 _EOF_
 }
 
@@ -81,14 +81,14 @@ fi
 
 
 
-if [ -f $APACHE_SITES/$DOMAIN ]
+if [ -f $APACHE_SITES/$DOMAIN.conf ]
 then
 	echo "SITE EXISTS. Exiting"
 	exit 1
 fi
 
 build_directory_structure
-build_vhost > $APACHE_SITES/$DOMAIN
+build_vhost > $APACHE_SITES/$DOMAIN.conf
 make_index > $WWW_ROOT/$DOMAIN/index.html
 set_permissions
 

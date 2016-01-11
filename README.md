@@ -24,12 +24,12 @@ Make the shell excutable and global access
 
 Make with love to apache2.
 
-In 2016, PhuHM ([@hmphu][1]) [2]
+In 2016, PhuHM ([@hmphu][1]), [http://hmphu.com][2]
 
 ###  Support or Contact
 
 Having trouble? [contact me][3]
 
 [1]: https://github.com/hmphu
-[2]: mailto:me@hmphu.com
-[3]: http://www.hnphu.com
+[2]: http://www.hnphu.com
+[3]: mailto:me@hmphu.com

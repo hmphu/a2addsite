@@ -25,6 +25,33 @@
 <p>This script help you create a new apache2 virtual hosts quickly.</p>
 
 <h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>Download and Extract Archives with WGET</p>
+<code>
+$ wget https://github.com/hmphu/a2addsite/archive/master.tar.gz -O - | tar -xz
+</code>
+
+<p>Download and Extract Archives with CURL</p>
+<code>
+$ curl -L https://github.com/hmphu/a2addsite/archive/master.tar.gz | tar -xz
+</code>
+
+
+<p>Make the shell excutable and global access</p>
+<code>
+cd a2addsite-master
+chmod +x a2addsite
+sudo mv a2addsite /usr/local/bin/a2addsite
+</code>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+<code>
+a2addsite <domain>
+</code>
+
+<h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
 <p>Make with love to apache2.<p>

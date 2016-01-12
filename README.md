@@ -14,7 +14,11 @@ Download and Extract Archives with CURL
 
 Make the shell excutable and global access
 
-` cd a2addsite-master chmod +x a2addsite sudo mv a2addsite /usr/local/bin/a2addsite `
+```
+cd a2addsite-master
+chmod +x a2addsite
+sudo mv a2addsite /usr/local/bin/a2addsite 
+```
 
 ###  Usage
 
